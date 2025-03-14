@@ -1,0 +1,226 @@
+@charset 'UTF-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap'); /* Fontes do Google Fonts */
+
+@font-face { /*Fonte externa baixada, arquivo no computador */
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format(opentype); 
+    font-weight: normal;
+}
+
+:root{ /* Variaveis para facilitar alteração na conf. em grupo */
+    --cor1: #F5B9E4;
+    --cor2: #EC8ECB;
+    --cor3: #A86591;
+    --cor4: #643C56;
+
+    --fonte-padrao: arial, verdana, helvetica, sans-serif;
+    --fonte-destaque: 'big shoulders';
+    --fonte-titulo: 'kablammo', sans-serif;
+    --fonte-android: 'Android', cursive;
+}
+
+*{ /* * é uma Conf. global, serve para facilitar os comandos e visualização*/
+    margin: 0px;
+    padding: 0px;
+}
+    
+body{ /* corpo do site, cor do fundo */
+    background-color: #F5B9E4;
+    font-family: var(--fonte-padrao)
+}
+
+a.externo::after{ /* conf de class para todo o link ext, ter o emoji ao lado do texto */
+    content: '\00A0\1F517';
+}
+
+header{ /* Cabeçalho */
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor4)); /* Degrade no cabeçalho*/
+    min-height: 100px; /* Altura minima do cabeçalho */
+    text-align: center;
+    padding: 30px; /* Margem superior da palavra central */
+
+}
+
+a::
+
+header > h1{
+    color: #ffffff;
+    font-family: var(--fonte-destaque);
+    font-weight: normal; /* retirar o negrito da fonte*/
+    margin-bottom: 20px; /* Margem inferior para os textos do cabeçalho não ficarem juntos */
+    font-size: 3em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.363); /* sombra no titulo principal */
+    
+}
+
+header > p{
+    font-family: var(--fonte-padrao);
+    font-size: 1.0em;
+    max-width: 500px; /*texto inferior não ultrapassar a largura do titulo, titulo principal. (+ Margin e padding)  */
+    margin: auto;
+    padding: 10px;
+    color: white;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.353); /* sombra no texto */
+}
+
+nav{ /* conf. do MENU */
+    background-color: var(--cor4);
+    padding: 10px;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.242); /* sombra do menu */
+}
+
+nav > a { /*  conf. para as palavras com link*/
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;/*borda de fundo da palavra ao passar o mouse sobre ela */
+    transition-duration: 0.5s; /* Tempo de resposta para a cor mudar ao passar o mouse sobre a palavra */
+}
+
+nav > a:hover{ /* Mudar a cor da palavra e do fundo ao passar o mouse por cima */
+    background-color: #EC8ECB;
+    color: #643C56;
+    
+}
+
+main{ /*conteudo principal, conf. da caixa central do artigo */
+ 
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto; /* Conf. acima para criar a caixa centralizada no site */
+    padding: 20px; /* Serve para o conteudo não ficar grudado na borda */
+    background-color: white;
+    box-shadow: 0px 0px 10px hsla(0, 0%, 0%, 0.388); /* Sombra da caixa */
+    margin-bottom: 30px; /* Somente margem inferior */
+    border-bottom-left-radius: 10px; /* Somente as bordas inferior arredondadas */
+    border-bottom-right-radius: 10px;
+    
+}
+
+main img{ 
+    width: 100%; /* Conf. em conj. com a tag picture no html e as medidas da caixa centralizada no comentario acima, criaram a func. de responsividade da imagem*/
+}
+
+main img.pequena { /* Conf. para quando se tem somente uma imagem e quer que ela fique pequena e centralizada no site  */
+    max-width: 250px;
+    display: block;
+    margin: auto;
+}
+
+main h1{
+    color: #643C56;
+    font-family: var(--fonte-android);
+    font-weight: normal; /* retirar o negrito da fonte*/
+    font-size: 1.8em;
+    
+}
+main h2{
+    color: #643C56;
+    font-family: var(--fonte-android);
+    font-size: 1.3em;
+    font-weight: normal;  /* retirar o negrito da fonte*/
+    background-image: linear-gradient(to right, var(--cor1), transparent); /* degrade da cor x até a transparencia */
+    
+}
+
+main p { 
+    margin: 15px 0px ; /* Como tiramos a margem na conf global *, colocamos margem em todos os patagrafos */
+    text-align: justify;
+    text-indent: 30px; /* Recuo do paragrafo */
+    font-size: 1em; /* tamanho da fonte */
+    line-height: 2em; /* *espaçamento entre as linhas do paragrafo */
+}
+
+main strong{ /*  conf. para as palavras em destaque*/
+    color: #643C56;
+    font-weight: bold;
+}
+
+main a { /*  conf. para as palavras com link*/
+    text-decoration: none;
+    font-weight: bold;
+    color: #643C56;
+    background-color: #f5b9e4b4;
+    padding: 2px 6px;
+    border-radius: 2px;
+}
+
+#principal{ /* o fundo no texto marcado estava discrepante, criei uma id principal para uma conf pontual*/
+    background-color: #a8659115 ;
+}
+
+main a:hover{ /*  conf. para as palavras com link*/
+    text-decoration: underline;
+    color: #A86591;
+
+}
+
+div.video{ /*Conf em class e div no video incorporado de site externo, pois esses codigos já vem prontos.*/
+    background-color: #A86591;
+    margin: 0px -20px 30px -20px; /*conf da caixa de fundo do video, para ficar rente ao bloco principal e com um afastamento da borda*/
+    padding: 20px;
+    padding-bottom: 57.3%;
+    position: relative; 
+
+}
+
+div.video > iframe { /* ajuste para o video do youtube ficar centralizado no nosso site*/
+    position: absolute;
+    top: 5% ;
+    left: 5% ; /*Toda essa conf + o padding-bottom e position na div.video acima, serviu para configurar o video no centro da caixa principal do site*/
+    width: 90%;
+    height: 90%;
+}
+
+aside{ /* Conteudos Perifericos, assuntos complementares que não tem a mesma importancia do artigo */
+    background-color: #EC8ECB;
+    padding: 10px;
+    border-radius: 10px; /* arredondar as bordas da caixa */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.226); /*sombra na caixa do aside*/
+}
+
+aside > h3{
+    background-color: #A86591;
+    font-family: var(--fonte-padrao);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px; /* conf para o padding e a margin do h3 ficar encaixada com a caixa do aside */
+    border-radius: 10px 10px 0px 0px; /*  conf para a borda superior do padding do h3 ficara colada a caixa do aside dando um efeito visual de continuidade da caixa principal, a borda inferior fica reta*/
+    
+
+}
+
+aside > ul{ /* ul é a lista, conf. da lista dentro da caixa aside*/
+    list-style-position: inside; /* o marcador da lista para o lado de dentro */
+    columns: 2; /* dividir a lista em duas colunas */
+    list-style-type: '\2705\00A0\00A0'; /* 00A0 ou 0020 é o espaço entre o emoji e a palavra*/ /*2705 é o cod do emoji pelo emojipedia*/ /* conf. para mudar o marcador padrão da lista para um emoji*/
+
+
+}
+
+footer{ /* Rodape */
+    background-color: #643C56;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+    
+}
+
+footer a { /* conf. palavras com link */
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+
+}
+
+footer a:hover{ /*  conf. para quando passar o mouse sobre a palavra com link*/
+    text-decoration: underline;
+    color: #EC8ECB;
+    position: ;
+}
+
