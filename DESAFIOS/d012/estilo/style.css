@@ -4,6 +4,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
+:root{
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: "Passion One", sans-serif;
+    --fonte3: "Sriracha", cursive;
+
+}
+
 *{ /*agrupar tudo inicialmente para facilitar as conf posteriores*/
     margin: 0px;
     padding: 0px;
@@ -12,17 +19,23 @@
 html, body{
     min-height: 100vh;
     background-color: darkgray;
+    font-family: var(--fonte1)
+
 }
 
 header{
     background-color: black;
     color: white;
     text-align: center;
+    
     }
 
     header > h1{
         padding-top: 50px ; /*espaço na parte superior do texto h1*/
         font-variant: small-caps;  /*mudar todas as letras para maiuscula*/
+        font-family: var(--fonte2);
+        font-size: 4.2vw;
+        
     }
 
     header > p{
@@ -46,6 +59,8 @@ header{
         padding-bottom: 10vh;
         line-height: 2em; /* espaçamento entre as linhas*/ 
         padding-left: 30px;
+        font-family: var(--fonte3);
+        font-size: 2.7vw;
 
     }
 
@@ -61,7 +76,8 @@ header{
 
     section.imagem > p{ /*caixa de fundo para o meu p que terá imagem de fundo*/
         background-color: rgba(0, 0, 0, 0.382);
-        width: 400px;
+        display: inline-block;
+        padding: 5px;
     }
 
     footer{
