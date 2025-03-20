@@ -10,6 +10,14 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        caption{
+            font-size: 1.5em;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 10px;
+            font-weight: bold ;
+            background-color: rgba(255, 127, 80, 0.366);
+        }
+
         table{
             width: 600px;
             border-collapse: collapse;
@@ -38,6 +46,10 @@
             text-align: right;
         }
 
+        tbody > tr:nth-child(even){
+            background-color: rgba(255, 127, 80, 0.145);
+        }
+
         
 
         </style>
@@ -47,11 +59,15 @@
 
     <table>
 
+        <caption>
+            População das Unidades Federativas no Brasil
+        </caption>
+
         <thead>
             <tr>
                 <th></th>
-                <th>Unidade Federativa</th>
-                <th>População</th>
+                <th scope="col">Unidade Federativa</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
          
 
@@ -199,7 +215,7 @@
         <tfoot>
             <tr>
                 <th></th>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>212.583.750</strong></td>
             </tr>
 
