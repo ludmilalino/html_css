@@ -4,8 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabelas</title>
+
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table{
+            border-collapse: collapse;
+            
+
+        }
+
+        th, td{
+            border: 1px solid black;
+            padding: 10px;
+            width: 100px;
+            
+        }
+
+        thead {
+            background-color: rgb(160, 160, 160);
+            color: white;
+        }
+        
+        caption{
+            font-size: 0.9em;
+            padding: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgba(184, 184, 184, 0.363);
+            font-weight: bold;
+        }
+
+        .nome{
+            background-color: rgba(255, 255, 0, 0.325);
+        }
+
+        .sexo{
+            background-color: rgba(0, 255, 255, 0.232);
+        }
+        
+
+        .profi{
+            background-color: rgba(255, 0, 0, 0.247);
+        }
+
+    </style>
 </head>
 <body>
+
+    <h1>Testando Tabela com a tag Colgroup</h1>
+
+    <table>
+
+        <colgroup>
+        <col class="nome">
+        <col class="sexo" span="2">
+        <col class="profi">
+        </colgroup>
+
+        <caption>Cadastros</caption>
+
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Idade</th>
+                <th scope="col">Profissão</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Vanessa</td>
+                <td>F</td>
+                <td>49</td>
+                <td>Jornalista</td>
+            </tr>
+
+            <tr>
+                <td>Bianca</td>
+                <td>F</td>
+                <td>23</td>
+                <td>Médica</td>
+            </tr>
+
+            <tr>
+                <td>Ingrid</td>
+                <td>F</td>
+                <td>33</td>
+                <td>Dentista</td>
+            </tr>
+
+            <tr>
+                <td>João</td>
+                <td>M</td>
+                <td>45</td>
+                <td>Professor</td>
+            </tr>
+
+            <tr>
+                <td>Pedro</td>
+                <td>M</td>
+                <td>26</td>
+                <td>Programador</td>
+            </tr>
+
+            <tr>
+                <td>Marcelo</td>
+                <td>M</td>
+                <td>39</td>
+                <td>Fotográfo</td>
+            </tr>
+        </tbody>
+
+    </table>
     
 </body>
 </html>
