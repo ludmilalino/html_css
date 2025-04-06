@@ -18,6 +18,11 @@ menu{
     display: none;
 }
 
-article::after{
-    content: Esse artigo foi impresso através do site www.cursoemvideo.com;
+article {
+    width: 100%;
 }
+
+article::after{
+    content: 'Esse artigo foi impresso através do site www.cursoemvideo.com';
+}
+
